@@ -5,5 +5,9 @@ from . import models
 admin.site.register(models.About)
 admin.site.register(models.Education)
 admin.site.register(models.ProfessionalExperience)
+admin.site.register(models.Portfolio)
+admin.site.register(models.Project)
+
+
 
 
