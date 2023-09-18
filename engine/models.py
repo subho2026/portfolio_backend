@@ -24,6 +24,7 @@ class About(models.Model):
 
 class Education(models.Model):
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+    degree = models.CharField(max_length=1024)
     university = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField(null=True)

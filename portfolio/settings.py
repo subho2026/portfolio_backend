@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'engine',
     'account',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -145,3 +148,7 @@ DJRICHTEXTFIELD_CONFIG = {
 }
 
 AUTH_USER_MODEL = 'account.User'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
