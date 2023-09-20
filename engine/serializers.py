@@ -26,6 +26,12 @@ class ProfessionalExperience(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class Skill(serializers.ModelSerializer):
+    class Meta:
+        model = models.Skill
+        fields = '__all__'
+
+
 class Project(serializers.ModelSerializer):
     class Meta:
         model = models.Project
